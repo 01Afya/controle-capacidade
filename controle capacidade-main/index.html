@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Controle de Vagas por Polo</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
+
+</head>
+<body>
+    <div id="step1" class="step">
+        <h1>Selecione seu Polo</h1>
+        <form id="poloForm">
+            <label for="polo">Polo:</label>
+            <select id="polo" name="polo" required>
+                <option value="">Selecione</option>
+            </select>
+            <button type="submit" class="btn">Avançar</button>
+        </form>
+    </div>
+
+    <div id="step2" class="step" style="display:none;">
+        <h1>Controle de Vagas - <span id="selectedPolo"></span></h1>
+        <p>Matrículas restantes: <span id="remainingSeats">1000</span></p>
+        <form id="labForm">
+            <label for="labName">Nome do Laboratório:</label>
+            <input type="text" id="labName" name="labName" required>
+
+            <label for="vagas">Quantidade de Vagas:</label>
+            <input type="number" id="vagas" name="vagas" min="1" required>
+
+            <fieldset>
+                <legend>Data:</legend>
+                <div id="dateContainer">
+                    <table id="dateTable">
+                        <thead>
+                            <tr>
+                                <th>Dia</th>
+                                <th>Dia da Semana</th>
+                                <th>Selecionar</th>
+                            </tr>
+                        </thead>
+                        <tbody id="dateBody">
+                            <!-- As opções de data serão inseridas aqui pelo JavaScript -->
+                        </tbody>
+                    </table>
+                </div>
+            </fieldset>
+
+            <fieldset>
+                <legend>Horário de Brasília:</legend>
+                <div id="timeContainer">
+                    <table id="timeTable">
+                        <thead>
+                            <tr>
+                                <th>Horário</th>
+                                <th>Selecionar</th>
+                            </tr>
+                        </thead>
+                        <tbody id="timeBody">
+                            <!-- As opções de horário serão inseridas aqui pelo JavaScript -->
+                        </tbody>
+                    </table>
+                </div>
+            </fieldset>
+
+            <button type="submit" class="btn">Gerar</button>
+        </form>
+
+        <h2>Laboratórios e Vagas Disponíveis</h2>
+        <table id="labTable">
+            <thead>
+                <tr>
+                    <th>Laboratório</th>
+                    <th>Dia</th>
+                    <th>Dia da Semana</th>
+                    <th>Horário de Brasília</th>
+                    <th>Vagas</th>
+                </tr>
+            </thead>
+            <tbody>
+            </tbody>
+        </table>
+        <button id="exportBtn" class="btn">Exportar para Excel</button>
+        <a class="submitBtn" href="https://forms.office.com/pages/responsepage.aspx?id=6Oy8YGvrTkmmB-g_zc7zM2_ciw5EOc5KtC1xVaiXx5VUQTFPVkpHNDVEMExEVkNQQzFORUk2ODk1Qi4u&route=shorturl" target="_blank">Formulário para envio do arquivo exportado</a>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
