@@ -153,11 +153,6 @@ document.addEventListener("DOMContentLoaded", function() {
         const selectedDates = Array.from(document.querySelectorAll("input[name='date']:checked")).map(cb => cb.value);
         const selectedTimes = Array.from(document.querySelectorAll("input[name='time']:checked")).map(cb => cb.value);
 
-        if (remainingSeats < vagas) {
-            alert("Quantidade de vagas excede o número de matrículas restantes.");
-            return;
-        }
-
         selectedDates.forEach(date => {
             let dayOfWeek = dates.find(d => d.formattedDate === date).dayOfWeek;
             selectedTimes.forEach(time => {
