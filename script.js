@@ -82,7 +82,7 @@ document.addEventListener("DOMContentLoaded", function() {
         let formattedDate = date.toLocaleDateString('pt-BR', { day: '2-digit', month: '2-digit', year: 'numeric' });
 
         // Excluir domingos e o feriado de 02/11/2024
-        if (dayOfWeek !== 'domingo' && formattedDate !== '02/11/2024') {
+        if (dayOfWeek !== 'domingo' && formattedDate !== '02/11/2024' && formattedDate !== '15/11/2024') {
             dates.push({ formattedDate, dayOfWeek });
         }
     }
