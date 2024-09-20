@@ -59,6 +59,7 @@ document.addEventListener("DOMContentLoaded", function() {
         "Polo Uniredentor Itaperuna - RJ": 407,
         "Polo Unitpac Araguaína - TO": 450,
         "Polo Vitória da Conquista - BA": 453,
+        "FADEP": 239,
         // ... outros polos ...
     };
 
