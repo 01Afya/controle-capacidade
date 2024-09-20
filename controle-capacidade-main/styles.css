@@ -1,0 +1,144 @@
+/* Fontes e Cores */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 20px;
+    background-image: url('Img/Background/background_main.png');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    color: #333;
+}
+
+h1, p {
+    text-align: center;
+    color: #2c3e50;
+    margin-bottom: 20px;
+}
+
+.step {
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.9), rgba(240, 240, 240, 0.9)); 
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    padding: 30px;
+    max-width: 800px;
+    width: 100%;
+    transition: transform 0.3s ease;
+}
+
+.step:hover {
+    transform: translateY(-5px);
+}
+
+label {
+    display: block;
+    margin-top: 15px;
+    font-weight: 500;
+    color: #2c3e50;
+}
+
+input, select, button {
+    width: 100%;
+    padding: 12px 15px;
+    margin-top: 10px;
+    margin-bottom: 15px;
+    box-sizing: border-box;
+    border-radius: 8px;
+    border: 1px solid #bdc3c7;
+    font-size: 16px;
+    font-family: 'Roboto', sans-serif;
+    transition: all 0.3s ease;
+}
+
+input:focus, select:focus {
+    border-color: #0c2588f3;
+    box-shadow: 0 0 10px rgba(12, 37, 136, 0.5);
+    outline: none;
+}
+
+button {
+    background: linear-gradient(135deg, #0208aad5, #1400ca6d);
+    color: #ffffff;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 500;
+    transition: background-color 0.10s ease, transform 0.3s ease;
+}
+
+button:hover {
+    background-color: #ca005e;
+    transform: translateY(-3px);
+    box-shadow: 0 4px 10px rgba(202, 0, 94, 0.2);
+}
+
+fieldset {
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    padding: 20px;
+    margin-top: 20px;
+}
+
+legend {
+    font-weight: 500;
+    font-size: 18px;
+    color: #333;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+th, td {
+    padding: 15px;
+    border: 1px solid #ddd;
+    text-align: center;
+    font-size: 15px;
+}
+
+th {
+    background-color: #b90d57;
+    color: #fff;
+    font-weight: 500;
+}
+
+tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+input[type="checkbox"] {
+    margin-right: 5px;
+}
+
+.submitBtn {
+    display: inline-block;
+    background: linear-gradient(135deg, #0208aad5, #1400ca80);
+    color: #fff;
+    text-align: center;
+    padding: 12px 20px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 500;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    margin-top: 20px;
+}
+
+.submitBtn:hover {
+    background-color: #ca005e;
+    transform: translateY(-3px);
+    box-shadow: 0 4px 10px rgba(202, 0, 94, 0.2);
+}
+
+/* Destacar os sábados com a cor amarela */
+.saturday {
+    background-color: #ff99c436;
+}
