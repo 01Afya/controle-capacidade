@@ -74,7 +74,7 @@ document.addEventListener("DOMContentLoaded", function() {
     }
 
     const dates = [];
-    for (let date = new Date('2025-05-04'); date <= new Date('2025-06-01'); date.setDate(date.getDate() + 1)) {
+    for (let date = new Date('2025-05-06'); date <= new Date('2025-06-01'); date.setDate(date.getDate() + 1)) {
         let dayOfWeek = date.toLocaleDateString('pt-BR', { weekday: 'long' });
         let formattedDate = date.toLocaleDateString('pt-BR', { day: '2-digit', month: '2-digit', year: 'numeric' });
 
